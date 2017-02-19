@@ -16,7 +16,8 @@ namespace cint
 	typedef unsigned short int usi;
 	typedef unsigned int ui;
 	typedef short int si;
-	typedef std::int8_t i8;
+	typedef std::uint8_t ui8;		//Max 256
+	typedef std::int8_t i8;			//Max -128 / 127
 	typedef std::int16_t i16;
 	typedef std::int32_t i32;
 }

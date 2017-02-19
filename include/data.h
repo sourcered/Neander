@@ -10,8 +10,8 @@ namespace neander
 {
 	#ifndef MEMORY_CONSTANS
 	#define MEMORY_CONSTANS
-	// const cint::si maxBIT = 8;
-	// const cint::si sizeMemory = maxBIT * maxBIT;
+	extern const cint::i8 maxBIT;
+	extern const cint::i8 sizeMemory;
 	#endif
 
 	enum class Log : cint::i8
@@ -53,6 +53,7 @@ namespace neander
 	{
 		Registers registers;
 		cint::i8 Imemory[256][2];			//Instructions, eddress || Value
+		cint::i8 Full_Memory[256];
 	};
 
 	struct AStack

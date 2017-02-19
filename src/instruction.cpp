@@ -2,8 +2,6 @@
 
 namespace neander
 {
-	Memory memory;
-	
 	bool Jumper::isNegative()
 	{
 		return (memory.registers.AC < 0);

@@ -17,6 +17,9 @@ namespace neander
 						  instruction(new Instruction()) {} 
 		cint::i8 getDecimalInstruction(const std::string &);				//Get a std::string and convert to a integer
 		void mapInstructions(const std::map<std::string, cint::i8> &);		//Pass std::map to a matrix decimal (memory)
+		Instructions getKeyword(cint::i8 &);
+		cint::i8 get_number_Parameters(Instructions);
+		void executeInstruction(cint::i8 &);
 	};
 
 }
