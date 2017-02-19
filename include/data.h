@@ -1,7 +1,10 @@
 #ifndef DATA_H
 #define DATA_H
 
+#ifndef INCLUDE_PREPROCESSOR_H
+#define INCLUDE_PREPROCESSOR_H
 #include "preprocessor.h"
+#endif
 
 namespace neander
 {
@@ -11,7 +14,7 @@ namespace neander
 	// const cint::si sizeMemory = maxBIT * maxBIT;
 	#endif
 
-	enum class Log
+	enum class Log : cint::i8
 	{
 		PARAMETER_ERROR,
 		TOO_MUCH_PARAMETER_ERROR,
@@ -20,7 +23,7 @@ namespace neander
 		SUCESS
 	};
 
-	enum class Instruction
+	enum class Instructions : cint::i8
 	{
 		NOP,
 		NOT,
@@ -40,24 +43,32 @@ namespace neander
 		std::map<std::string, std::string> programData;	//Instruction Address
 	};
 
+	struct Registers
+	{
+		cint::i8 PC;
+		cint::i8 AC;						//Acumulator
+	};
+
 	struct Memory
 	{
-		cint::si AC;						//Acumulator
-		cint::si Imemory[256][2];			//Instructions, eddress || Value
+		Registers registers;
+		cint::i8 Imemory[256][2];			//Instructions, eddress || Value
 	};
 
 	struct AStack
 	{
-		cint::si instructionPosition;		
-		Instruction instruction;
-		cint::si paramenter;
+		cint::i8 instructionPosition;
+		Instructions instructions;
+		cint::i8 paramenter;
 	};
 
 	struct Stack
 	{
-		cint::si PC;						//Current position
+		cint::i8 PC;						//Current position
 		std::vector<AStack> stack;			//Stack of instructions to do
 	};
+
+	extern Memory memory;
 }
 
 #endif

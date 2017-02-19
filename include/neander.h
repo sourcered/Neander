@@ -1,4 +1,3 @@
-//CORE
 #ifndef NEANDER_H
 #define NEANDER_H
 
@@ -6,7 +5,7 @@
 
 namespace neander
 {
-	class Neander
+	class Neander : public Core
 	{
 	public:
 		void init(const std::string &); 					//File name
