@@ -1,0 +1,9 @@
+NOP
+NOT
+ADD
+STA
+LDA
+JM
+JN
+JZ
+HLT
