@@ -17,27 +17,27 @@ namespace neander
 	{
 	}
 
-	void Instruction::_sta(const cint::i8 address)
+	void Instruction::_sta(const cint::ui8 address)
 	{
 		memory.Imemory[address][0] = memory.registers.AC;
 	}
 
-	void Instruction::_lda(const cint::i8 address)
+	void Instruction::_lda(const cint::ui8 address)
 	{
 		memory.registers.AC = memory.Imemory[address][0];
 	}
 
-	void Instruction::_add(const cint::i8 address)
+	void Instruction::_add(const cint::ui8 address)
 	{
 		memory.registers.AC += memory.Imemory[address][0];
 	}
 
-	void Instruction::_or(const cint::i8 address)
+	void Instruction::_or(const cint::ui8 address)
 	{
 		memory.registers.AC |= memory.Imemory[address][0];	  	
 	}
 
-	void Instruction::_and(const cint::i8 address)
+	void Instruction::_and(const cint::ui8 address)
 	{
 		memory.registers.AC &= memory.Imemory[address][0];
 	}
@@ -47,17 +47,17 @@ namespace neander
 		memory.registers.AC = ~memory.registers.AC; 	//Complement 1
 	}
 
-	void Instruction::_jmp(const cint::i8 address)
+	void Instruction::_jmp(const cint::ui8 address)
 	{
 		memory.registers.PC = address;
 	}
 
-	void Instruction::_jn(const cint::i8 address)
+	void Instruction::_jn(const cint::ui8 address)
 	{
 		memory.registers.PC = address;
 	}
 
-	void Instruction::_jz(const cint::i8 address)
+	void Instruction::_jz(const cint::ui8 address)
 	{
 		memory.registers.PC = address;
 	}

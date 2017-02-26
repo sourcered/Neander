@@ -1,0 +1,4 @@
+lda 128
+add 129
+sta 255
+hlt

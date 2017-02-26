@@ -20,15 +20,15 @@ namespace neander
 	{
 	public:
 		void _nop();
-		void _sta(const cint::i8);
-		void _lda(const cint::i8);
-		void _add(const cint::i8);
-		void _or(const cint::i8);
-		void _and(const cint::i8);
+		void _sta(const cint::ui8);
+		void _lda(const cint::ui8);
+		void _add(const cint::ui8);
+		void _or(const cint::ui8);
+		void _and(const cint::ui8);
 		void _not();
-		void _jmp(const cint::i8);
-		void _jn(const cint::i8);
-		void _jz(const cint::i8);
+		void _jmp(const cint::ui8);
+		void _jn(const cint::ui8);
+		void _jz(const cint::ui8);
 		void _hlt();
 	};
 

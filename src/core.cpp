@@ -2,31 +2,31 @@
 
 namespace neander
 {
-	cint::i8 Core::getDecimalInstruction(const std::string & instruction_)
+	cint::ui8 Core::getDecimalInstruction(const std::string & instruction_)
 	{
-		cint::i8 value = 0;
+		cint::ui8 value = 0;
 		return value;
 	}
 
-	void Core::mapInstructions(const std::map<std::string, cint::i8> & program_Instructions)
+	void Core::mapInstructions(const std::map<std::string, cint::ui8> & program_Instructions)
 	{
 
 	}
 
-	Instructions Core::getKeyword(cint::i8 & PC)
+	Instructions Core::getKeyword(cint::ui8 & PC)
 	{
 		Instructions instructions = Instructions::NOP;
 		return instructions;
 	}
 
-	cint::i8 Core::get_number_Parameters(Instructions instructions)
+	cint::ui8 Core::get_number_Parameters(Instructions instructions)
 	{
-		cint::i8 tmp = 0;
+		cint::ui8 tmp = 0;
 		return tmp;
 	}
 
 
-	void Core::executeInstruction(cint::i8 & PC)
+	void Core::executeInstruction(cint::ui8 & PC)
 	{	
 		Instructions keyword = getKeyword(PC);
 

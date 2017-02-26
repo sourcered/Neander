@@ -10,11 +10,11 @@ namespace neander
 {
 	#ifndef MEMORY_CONSTANS
 	#define MEMORY_CONSTANS
-	extern const cint::i8 maxBIT;
-	extern const cint::i8 sizeMemory;
+	extern const cint::ui8 maxBIT;
+	extern const cint::ui8 sizeMemory;
 	#endif
 
-	enum class Log : cint::i8
+	enum class Log : cint::ui8
 	{
 		PARAMETER_ERROR,
 		TOO_MUCH_PARAMETER_ERROR,
@@ -23,7 +23,7 @@ namespace neander
 		SUCESS
 	};
 
-	enum class Instructions : cint::i8
+	enum class Instructions : cint::ui8
 	{
 		NOP,
 		NOT,
@@ -45,27 +45,27 @@ namespace neander
 
 	struct Registers
 	{
-		cint::i8 PC;
-		cint::i8 AC;						//Acumulator
+		cint::ui8 PC;
+		cint::ui8 AC;						//Acumulator
 	};
 
 	struct Memory
 	{
 		Registers registers;
-		cint::i8 Imemory[256][2];			//Instructions, eddress || Value
-		cint::i8 Full_Memory[256];
+		cint::ui8 Imemory[256][2];			//Instructions, eddress || Value
+		cint::ui8 Full_Memory[256];
 	};
 
 	struct AStack
 	{
-		cint::i8 instructionPosition;
+		cint::ui8 instructionPosition;
 		Instructions instructions;
-		cint::i8 paramenter;
+		cint::ui8 paramenter;
 	};
 
 	struct Stack
 	{
-		cint::i8 PC;						//Current position
+		cint::ui8 PC;						//Current position
 		std::vector<AStack> stack;			//Stack of instructions to do
 	};
 
