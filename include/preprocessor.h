@@ -4,12 +4,15 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <list>
 #include "math.h"
 #include <string>
 #include <cstdint>
+#include <fstream>
 
 #define for_(i, count) for(size_t i = 0; i < count; i++)
 #define while_d(i) while(i--)
+#define for_it(x,y) for(auto x = y.begin(); x != y.end(); x++)
 
 namespace cint
 {
