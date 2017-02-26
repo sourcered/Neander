@@ -8,7 +8,7 @@ namespace neander
 	class Neander : public Core
 	{
 	public:
-		void init(const std::string &); 					//File name
+		void init(const std::string &, Memory & memory); 					//File name
 	};
 }
 

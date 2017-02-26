@@ -14,14 +14,13 @@ namespace neander
 	public:
 		friend class FileManager;
 
-		Core() : filemanager(new FileManager()), 
-						  instruction(new Instruction()) {} 
+		Core() : filemanager(new FileManager()), instruction(new Instruction()) {} 
 
-		cint::ui8 getDecimalInstruction(const std::string &);				//Get a std::string and convert to a integer
-		void mapInstructions(const std::map<std::string, cint::ui8> &);		//Pass std::map to a matrix decimal (memory)
+		cint::ui8 getDecimalInstruction(const std::string &);							//Get a std::string and convert to a integer
+		void mapInstructions(const std::map<std::string, cint::ui8> &, const Memory &);	//Pass std::map to a matrix decimal (memory)
 		Instructions getKeyword(cint::ui8 &);
 		cint::ui8 get_number_Parameters(Instructions);
-		void executeInstruction(cint::ui8 &);
+		void executeInstruction(cint::ui8 &, const Memory &);
 	};
 }
 

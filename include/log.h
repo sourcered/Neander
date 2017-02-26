@@ -12,6 +12,7 @@ namespace neander
 	{
 	public:
 		static void printMap(const std::map<std::string, cint::ui8> &);
+		static void printStatus();
 	};
 }
 

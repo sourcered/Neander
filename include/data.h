@@ -25,17 +25,17 @@ namespace neander
 
 	enum class Instructions : cint::ui8
 	{
-		NOP,
-		NOT,
-		ADD,
-		AND,
-		OR,	
-		STA,
-		LDA,
-		JM, 
-		JN, 
-		JZ, 
-		HLT 
+		NOP =   0,
+		NOT =  96,
+		ADD =  48,
+		AND =  80,
+		OR 	=  64,	
+		STA =  16,
+		LDA =  32,
+		JM 	= 128, 
+		JN 	= 144, 
+		JZ 	= 160, 
+		HLT = 240
 	};
 
 	struct ProgramData
@@ -69,7 +69,7 @@ namespace neander
 		std::vector<AStack> stack;			//Stack of instructions to do
 	};
 
-	extern Memory memory;
+	// extern Memory memory;
 }
 
 #endif
